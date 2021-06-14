@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>ArrayList</title>
+</head>
+<body>
+	<script>
+		let iList = [1, 3, 5];
+		let voList = [{name : "김연아", age : 20}, {name : "유재석", age : 25}];
+		console.log(JSON.stringify(iList));
+		console.log(JSON.stringify(voList));
+
+		// 추가
+		iList.push(4);
+		voList.push({name : "하하", age : 30});
+		console.log(JSON.stringify(iList));
+		console.log(JSON.stringify(voList));
+		
+		// 위치 지정 추가
+		iList.splice(1, 0, 7);
+		voList.splice(1, 0, {name : "전소민", age : 20});
+		console.log(JSON.stringify(iList));
+		console.log(JSON.stringify(voList));
+		
+		// 추출
+		console.log(JSON.stringify(iList.indexOf(3)));
+		console.log(JSON.stringify(iList.includes(3)));
+		
+		// 수정
+		iList.splice(1, 1, 9);	// 1번 자리에서 1개 제거후 추가
+		console.log(JSON.stringify(iList));
+		
+		// 제거
+		iList.splice(1, 1);
+		console.log(JSON.stringify(iList));
+		
+		// 전체 제거
+		iList.splice(0, iList.length);
+		console.log(JSON.stringify(iList));
+	</script>
+</body>
+</html>

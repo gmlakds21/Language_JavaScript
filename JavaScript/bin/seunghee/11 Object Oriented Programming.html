@@ -6,6 +6,44 @@
 </head>
 <body>
 	<script>
+		const persons = [{
+			name : "최승희",
+			job : "의사",
+			age : 45,
+			gender : "여",
+			blood : "A"
+		}, {
+			name : "이미녀",
+			job : "골프선수",
+			age : 28,
+			gender : "여",
+			blood : "O"
+		}, {
+			name : "김미남",
+			job : "교수",
+			age : 47,
+			gender : "남",
+			blood : "AB"
+		}, { }]
+		
+		persons.forEach((person, index) => {
+			if(!person.name) {
+				person.name = "홍길동";
+			}
+			if(!person.job) {
+				person.job = "무사";
+			}
+			if(!person.age) {
+				person.age = 18;
+			}
+			if(!person.gender) {
+				person.gender = "남";
+			}
+			if(!person.blood) {
+				person.blood = "O";
+			}
+			console.log(index+"번째 : "+JSON.stringify(person))
+		})
 		
 	</script>
 </body>
