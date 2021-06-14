@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>If Switch</title>
+</head>
+<body>
+	<script>
+		let age;
+		age = 10;
+		if(age >= 8) {
+			document.write("학교에 다닙니다.<br>");
+		}
+		
+		age = 7;
+		if(age >= 8) {
+			document.write("학교에 다닙니다.<br>");
+		} else {
+			document.write("학교에 다니지 않습니다.<br>");
+		}
+		
+		age = 9;
+		let charge = 0;
+		if(age > 8) {
+			charge = 1000;
+		}
+		document.write(`요금은 ${charge}원 입니다.<br>`);
+		
+		let studnet = "중학생";
+		switch(studnet) {
+			case "초등학생" : document.write("무료입니다.<br>"); break;
+			case "중학생" : document.write("700원 입니다.<br>"); break;
+			case "고등학생" : document.write("1000원 입니다.<br>"); break;
+			case "성인" : document.write("1200원 입니다.<br>"); break;
+			default : document.write("다시 확인해주세요.<br>"); 
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>For While</title>
+</head>
+<body>
+	<script>
+		let sum = 0;
+		
+		// for 문
+		for(let i=0; i<=10; i++) {
+			sum += i;
+		}
+		document.write(`1부터 10까지의 합은 ${sum}입니다.<br>`);
+		
+		// 구구단
+		for(let i=2; i<10; i++) {
+			document.write(`<br>${i}단<br>`);
+			for(let j=1; j<10; j++) {
+				document.write(`${i} x ${j} = ${i*j}<br>`);				
+			}
+		}
+		
+		// continue 문
+		sum = 0;
+		for(let i=1; i<100; i++) {
+			if(i%2 == 0) {
+				continue;
+			}
+			sum += i;
+		}
+		document.write(`1부터 100까지 홀수들의 합은 ${sum}입니다.<br>`);
+		
+		sum = 0;
+		// break 문
+		for(let i=1; ; i++) {
+			if(i%2 != 0) {
+				continue;
+			}
+			if(i > 100) {
+				break;
+			}
+			sum += i;
+		}
+		document.write(`1부터 100까지 짝수들의 합은 ${sum}입니다.<br>`);
+	</script>
+</body>
+</html>

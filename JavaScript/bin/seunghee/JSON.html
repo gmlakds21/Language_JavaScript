@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+	<script>
+		const data =  [{
+			name : "혼자 공부하는 파이썬",
+			price : 18000,
+			publisher : "한빛 미디어"
+		}, {
+			name : "HTML 웹 프로그래밍 입문",
+			price : 26000,
+			publisher : "한빛 미디어"
+		}]
+		
+		console.log(JSON.stringify(data));
+		console.log(JSON.stringify(data, null, 1));
+		
+		const json = JSON.stringify(data);
+		console.log(json);
+		console.log(JSON.parse(json));
+	</script>
+</body>
+</html>

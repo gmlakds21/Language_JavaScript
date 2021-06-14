@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Lodash</title>
+</head>
+<body>
+	<script>
+		const books = [{
+				name : '혼자 공부하는 파이썬',
+				price : 18000,
+				publisher : '한빛 미디어'
+			}, {
+				name : "HTML5 웹 프로그래밍 입문",
+				price : 26000,
+				publisher : '한빛 미디어'
+			}, {
+				name : "머신러닝 딥러닝 실전 개발 입문",
+				price : 30000,
+				publisher : '위키 북스'
+			}]
+		
+		const output = _.sortBy(books, (book) => book.price)
+		console.log(JSON.stringify(output, null, 2))	
+	
+	</script>
+</body>
+</html>

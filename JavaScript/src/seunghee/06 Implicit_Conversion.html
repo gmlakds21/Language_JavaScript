@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Implicit Conversion</title>
+</head>
+<body>
+	<script>
+		let num1 = 10;	
+		let str1 = '10';
+		document.write("num1 : "+typeof num1+"<br>");
+		document.write("str1 : "+typeof str1+"<br>");
+		document.write("<br>")
+	
+		let num2 = num1+'1';	
+		let str2 = ++str1;
+		document.write("num2 : "+typeof num2+"<br>");
+		document.write("str2 : "+typeof str2+"<br>");
+		document.write("<br>")
+	
+		let num3 = 10;	
+		let str3 = '10';
+		document.write("num3 : "+typeof num3+"<br>");
+		document.write("str3 : "+typeof str3+"<br>");
+		document.write("<br>")
+	
+		let num4 = String(num1);
+		let str4 = Number(str1);
+		document.write("num4 : "+typeof num4+"<br>");
+		document.write("str4 : "+typeof str4+"<br>");
+	</script>
+</body>
+</html>
