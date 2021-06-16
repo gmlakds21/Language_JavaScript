@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Event 1</title>
+</head>
+<body>
+	<script>
+		const listener = (event) => {
+			const length = event.currentTarget.value.length;
+			h1.textContent = `글자 수 : ${length}`;
+		}
+	
+		document.addEventListener('DOMContentLoaded', ( ) => {
+			const textarea = document.querySelector('textarea');
+			const h1 = document.querySelector('h1');
+			textarea.addEventListener('keyup', listener);
+			h1.textContent = `글자 수 : ${length}`; 
+		})
+	</script>
+	<h1></h1>
+	<textarea></textarea>
+</body>
+</html>
+<!--
+	이벤트와, 선언 부분을 분리
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const textarea = document.querySelector('textarea');
+		const h1 = document.querySelector('h1');
+		const length = textarea.value.length;
+		h1.textContent = `글자 수 : ${length}`;
+		
+		textarea.addEventListener('keyup', (event) => {
+			const length = textarea.value.length;
+			h1.textContent = `글자 수 : ${length}`;
+		})
+	}) 
+ -->

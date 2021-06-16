@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.name {
+	width: 100px;
+}
+
+.score {
+	width: 50px;
+}
+
+.computeBtn {
+	margin-left: 140px;
+	width: 50px;
+	color: white;
+	background: orange;
+	border: 1px solid black;
+}
+
+body {
+	width: 200px;
+}
+
+label {
+	margin-left: 20px;
+}

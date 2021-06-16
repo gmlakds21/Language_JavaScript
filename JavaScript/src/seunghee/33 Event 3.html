@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Event 3</title>
+</head>
+<body>
+	<script>
+		// 화살표 버튼으로 별을 움직이기
+		document.addEventListener('DOMContentLoaded', ( ) => {
+			
+			// 별 초기 설정
+			const star = document.querySelector('h1');
+			star.style.position = 'absolute';
+			
+			// 별 이동 출력
+			let [x, y] = [0, 0];
+			const block = 20;
+			const print = () => {
+				star.style.left = `${x * block}px`;
+				star.style.top = `${y * block}px`;
+			}
+			print()
+			
+			// 별 이동 기능
+			const [left, up, right, down] = [37, 38, 39, 40]
+			document.body.addEventListener('keydown', (event) => {
+				switch (event.keyCode) {
+					case left : x -= 1; break;
+					case up : y -= 1; break;
+					case right : x += 1; break;
+					case down : y += 1; break;
+				}
+				print()
+			})
+		})
+	</script>
+	<h1> * </h1>	
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>SungJuk V1</title>
+	<Link rel="stylesheet" href="../sungjuk.css">
+</head>
+<body>
+	<div>
+		<h3>성적 처리 시스템 V1</h3>
+		<div>
+			<label for="name">이름</label>
+			<input type="text" id="name" class="name">
+		</div>
+		<div>
+			<label for="kor">국어</label>
+			<input type="text" id="kor" class="score">
+		</div>
+		<div>
+			<label for="mat">수학</label>
+			<input type="text" id="mat" class="score">
+		</div>
+		<div>
+			<label for="eng">영어</label>
+			<input type="text" id="eng" class="score">
+		</div>
+		<button type="button" id="computeBtn" class="computeBtn">계산</button>
+	</div>
+	<hr>
+	<div>
+		<div>
+			<label id="reName">이름</label>
+			<input type="text" id="reName" class="name" readonly>
+		</div>
+		<div>
+			<label id="reKor">국어</label>
+			<input type="text" id="reKor" class="score" readonly>
+		</div>
+		<div>
+			<label id="reMat">수학</label>
+			<input type="text" id="reMat" class="score" readonly>
+		</div>
+		<div>
+			<label id="reEng">영어</label>
+			<input type="text" id="reEng" class="score" readonly>
+		</div>
+		<div>
+			<label id="reTot">총점</label>
+			<input type="text" id="reTot" class="score" readonly>
+		</div>
+		<div>
+			<label id="reAvg">평균</label>
+			<input type="text" id="reAvg" class="score" readonly>
+		</div>
+		<div>
+			<label id="reGrd">학점</label>
+			<input type="text" id="reGrd" class="score" readonly>
+		</div>
+	</div>
+	<script src="../js/01.js"></script>
+</body>
+</html>
