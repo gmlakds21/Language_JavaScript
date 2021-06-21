@@ -8,8 +8,19 @@ document.getElementById('computeBtn').addEventListener('click', function() {
 	let grd;
 
 	if(checkSungjuk(name, kor, mat, eng)) {
-		computeSungjuk(kor, mat, eng, tot, avg, grd);
-		printSungjuk(name, kor, mat, eng, tot, avg, grd);
+	
+		const person = {
+				name : name.value,
+				kor : kor.value,
+				mat : mat.value,
+				eng : eng.value,
+				tot : 0,
+				avg : 0,
+				grd : ''
+		}
+	
+		computeSungjuk(person);
+		printSungjuk(person);
 	}
 	
 	function checkSungjuk(name, kor, mat, eng) {
@@ -50,30 +61,30 @@ document.getElementById('computeBtn').addEventListener('click', function() {
 		}
 	}
 	
-	function computeSungjuk(kor, mat, eng, tot, avg, grd) {
-		tot = Number(kor.value) + Number(mat.value) + Number(eng.value);
-		avg = tot/3;
-		grd;
-		switch(Math.floor(avg/10)) {
+	function computeSungjuk(person) {
+		person.tot = Number(person.kor) + Number(person.mat) + Number(person.eng);
+		person.avg = person.tot/3;
+		person.grd;
+		switch(Math.floor(person.avg/10)) {
 		case 10 :
-		case 9 : grd = "수"; break;
-		case 8 : grd = "우"; break;
-		case 7 : grd = "미"; break;
-		case 6 : grd = "양"; break;
-		default : grd = "가";
+		case 9 : person.grd = "수"; break;
+		case 8 : person.grd = "우"; break;
+		case 7 : person.grd = "미"; break;
+		case 6 : person.grd = "양"; break;
+		default : person.grd = "가";
 		}
-		console.log(tot);
+		console.log(person.tot);
 	}
 	
-	function printSungjuk(name, kor, mat, eng, tot, avg, grd) {
-		console.log(tot);
-		document.getElementById('reName').value = name.value;
-		document.getElementById('reKor').value = kor.value;
-		document.getElementById('reMat').value = mat.value;
-		document.getElementById('reEng').value = eng.value;
-		document.getElementById('reTot').value = tot;
-		document.getElementById('reAvg').value = avg;
-		document.getElementById('reGrd').value = grd;
+	function printSungjuk(person) {
+		console.log(person.tot);
+		document.getElementById('reName').value = person.name;
+		document.getElementById('reKor').value = person.kor;
+		document.getElementById('reMat').value = person.mat;
+		document.getElementById('reEng').value = person.eng;
+		document.getElementById('reTot').value = person.tot;
+		document.getElementById('reAvg').value = person.avg;
+		document.getElementById('reGrd').value = person.grd;
 	}
 })
 

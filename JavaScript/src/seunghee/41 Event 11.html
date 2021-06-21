@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Event 11</title>
+</head>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		let status = false;
+		
+		const checkbox = document.querySelector('input');
+		checkbox.addEventListener('change', (evnet) => {
+			status = event.currentTarget.checked;
+		})
+		
+		const link = document.querySelector('a');
+		link.addEventListener('click', (event) => {
+			if(!status) {
+				event.preventDefault();
+			}
+		})
+	})
+</script>
+<body>
+	<input type="checkbox">
+	<span>링크 활성화</span>
+	<br>
+	<a href="http://google.com">구글</a>
+</body>
+</html>
